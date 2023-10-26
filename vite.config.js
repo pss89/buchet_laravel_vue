@@ -3,6 +3,10 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
+    server:{ // 임의로 변경 (docker port 사용을 위함)
+        host: '0.0.0.0',
+        port: 8080,
+    },
     plugins: [
         laravel({
             input: 'resources/js/app.js',
